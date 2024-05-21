@@ -1,0 +1,26 @@
+/* src/components/Common/Navbar.css */
+.navbar {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 100px;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Bootstrap warning color */
+  }
+  

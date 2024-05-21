@@ -1,0 +1,14 @@
+/* src/components/Common/LogoDisplay.css */
+.logo-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Ensure it matches the surrounding background */
+  }
+  
+  .logo-image {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+  }
+  

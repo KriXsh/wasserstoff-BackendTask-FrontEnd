@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from './components/Auth/Register';
+import Login from './components/Auth/Login';
+import ImageUpload from './components/Dashboard/ImageUpload';
+import ReviewAnnotations from './components/Dashboard/ReviewAnnotations';
+import DataExport from './components/Dashboard/DataExport';
+import Navbar from './components/Common/Navbar';
+import LogoDisplay from './components/Common/LogoDisplay'; // Import the LogoDisplay component
+import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <LogoDisplay /> {/* Add the LogoDisplay component below the Navbar */}
+      <div className="App container">
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/upload" element={<ImageUpload />} />
+          <Route path="/review" element={<ReviewAnnotations />} />
+          <Route path="/export" element={<DataExport />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
